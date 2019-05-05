@@ -1,0 +1,34 @@
+﻿@model IEnumerable<PetOwnerDatabase.ViewModel.GenderViewModel>
+@using PetOwnerDatabase.Models
+
+    @{
+        ViewData["Title"] = "TestAPI";
+    }
+
+    <h1>TestAPI</h1>
+    <br/>
+   <div class="card">
+       <div class="card-header">
+           <h5 class="card-title"> List of Cats</h5>
+       </div>
+       <div class="card-body">
+           <h6 class="card-subtitle text-success">@ViewBag.Massage</h6>
+           @foreach (var item in Model)
+           {
+               <p>
+                   <h3>
+                       @Html.DisplayFor(modelItem => item.Gender)
+                   </h3>
+                   <ul>
+                       @foreach (var pets in item.Pets)
+                       {
+                           <li>
+                               @Html.DisplayFor(modelItem => pets.Name)
+                           </li>
+                       }
+                   </ul>
+               </p>
+               <hr/>
+           }
+       </div>
+   </div>

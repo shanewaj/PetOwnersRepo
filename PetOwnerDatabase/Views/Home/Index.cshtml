@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .lnkColor {
+        color: #fff !important;
+    }
+
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Programming challenge</h1>
+
+    <hr />
+    <p>
+        A json web service has been set up at the url: <a href="/people.json">http://agl-developer-test.azurewebsites.net/people.json</a>
+    </p>
+    <p>You need to write some code to consume the json and output a list of all the cats in alphabetical order under a heading of the gender of their owner.</p>
+    <p>You can write it in any language you like. You can use any libraries/frameworks/SDKs you choose.</p>
+    <br/>
+    @Html.ActionLink("Click here To test API", "TestAPI", "Home", routeValues: null, htmlAttributes: new { @class = "btn btn-primary", @role = "button" })
+
+</div>
